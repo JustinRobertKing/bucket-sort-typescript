@@ -12,6 +12,7 @@ function bucketSort(arr, k = 10) {
         buckets[index].push(unsortedNumber);
     }
     for (let bucket of buckets) {
+        console.log('bucket', bucket);
         insertionSort(bucket);
         result = [...result, ...bucket];
     }

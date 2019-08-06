@@ -10,6 +10,7 @@ export default function bucketSort(arr: number[], k: number = 10): number[] {
 		buckets[index].push(unsortedNumber);
 	}
 	for (let bucket of buckets) {
+		console.log('bucket', bucket)
 		insertionSort(bucket);
 		result = [...result, ...bucket]
 	}
